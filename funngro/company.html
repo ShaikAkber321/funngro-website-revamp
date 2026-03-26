@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funngro for Companies – Hire Skilled Teen Talent at Unbeatable Value</title>
+  <meta name="description" content="Funngro connects businesses with a verified pool of skilled, motivated teenagers for digital marketing, content, design, testing and more. Fast, affordable, quality work." />
+  <meta name="keywords" content="hire teen talent, affordable digital marketing, student freelancers India, hire teens online, Funngro business, startup talent" />
+  <meta name="author" content="Funngro" />
+  <meta property="og:title" content="Funngro for Companies – Hire Skilled Teen Talent" />
+  <meta property="og:description" content="Access a ready pool of motivated, tech-savvy teens. Get quality work done faster and more affordably than traditional hiring." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #06090f;
+      --bg2: #0a0f1a;
+      --bg3: #0f1525;
+      --surface: #121a2e;
+      --surface2: #1a2340;
+      --border: rgba(255,255,255,0.07);
+      --accent: #00d4aa;
+      --accent2: #0099ff;
+      --accent3: #7c3aed;
+      --accent-glow: rgba(0,212,170,0.2);
+      --text: #dde2ed;
+      --text-muted: #7a879c;
+      --text-dim: #3d4a5c;
+      --white: #ffffff;
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 16px; line-height: 1.65; overflow-x: hidden; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 0 5%; display: flex; align-items: center; justify-content: space-between;
+      height: 70px; background: rgba(6,9,15,0.88); backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); }
+    .nav-pill {
+      background: var(--accent); color: #000; padding: 0.45rem 1.1rem; border-radius: 50px;
+      font-weight: 700; font-size: 0.85rem; text-decoration: none; transition: opacity .2s, transform .2s;
+    }
+    .nav-pill:hover { opacity: 0.88; transform: translateY(-1px); color: #000; }
+    .hamburger { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; }
+    .mobile-menu {
+      display: none; flex-direction: column; gap: 1rem;
+      position: fixed; top: 70px; left: 0; right: 0;
+      background: var(--bg2); padding: 1.5rem 5%;
+      border-bottom: 1px solid var(--border); z-index: 99;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: var(--text); text-decoration: none; font-size: 1rem; font-weight: 500; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh; padding: 120px 5% 80px;
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background: radial-gradient(ellipse 80% 70% at 55% 40%, rgba(0,212,170,0.09) 0%, transparent 65%),
+                  radial-gradient(ellipse 50% 50% at 20% 90%, rgba(0,153,255,0.07) 0%, transparent 60%),
+                  radial-gradient(ellipse 40% 40% at 90% 10%, rgba(124,58,237,0.06) 0%, transparent 50%),
+                  var(--bg);
+    }
+    .hero-grid {
+      position: absolute; inset: 0; z-index: 0; opacity: 0.025;
+      background-image: linear-gradient(var(--white) 1px, transparent 1px), linear-gradient(90deg, var(--white) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 680px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.3);
+      color: var(--accent); padding: 0.4rem 1rem; border-radius: 50px;
+      font-size: 0.82rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+      margin-bottom: 1.5rem; animation: fadeUp .6s ease both;
+    }
+    .hero h1 {
+      font-family: var(--font-display); font-size: clamp(2.6rem, 6vw, 4.4rem);
+      font-weight: 800; line-height: 1.05; letter-spacing: -1.5px;
+      color: var(--white); margin-bottom: 1.2rem;
+      animation: fadeUp .6s .1s ease both;
+    }
+    .hero h1 em { font-style: normal; color: var(--accent); }
+    .hero p {
+      font-size: 1.15rem; color: var(--text-muted); max-width: 520px; line-height: 1.75;
+      margin-bottom: 2.2rem; font-weight: 300; animation: fadeUp .6s .2s ease both;
+    }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp .6s .3s ease both; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--accent); color: #000; padding: 0.85rem 2rem;
+      border-radius: 50px; font-weight: 700; font-size: 1rem; text-decoration: none;
+      transition: transform .2s, box-shadow .2s; box-shadow: 0 0 30px var(--accent-glow);
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 40px rgba(0,212,170,0.35); }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: transparent; color: var(--text); padding: 0.85rem 2rem;
+      border-radius: 50px; border: 1px solid var(--border); font-weight: 600; font-size: 1rem;
+      text-decoration: none; transition: border-color .2s, color .2s;
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .hero-stats { display: flex; gap: 2.5rem; margin-top: 3rem; flex-wrap: wrap; animation: fadeUp .6s .4s ease both; }
+    .stat-num { font-family: var(--font-display); font-size: 1.9rem; font-weight: 800; color: var(--white); }
+    .stat-label { font-size: 0.82rem; color: var(--text-dim); margin-top: 0.1rem; }
+
+    /* Dashboard Mockup */
+    .hero-visual {
+      position: absolute; right: 5%; top: 50%; transform: translateY(-50%);
+      width: 400px; z-index: 1; animation: float 5s ease-in-out infinite;
+    }
+    .dash-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 20px;
+      padding: 1.5rem; box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+    }
+    .dash-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; }
+    .dash-title { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: var(--white); }
+    .dash-badge { background: rgba(0,212,170,0.12); color: var(--accent); border: 1px solid rgba(0,212,170,0.25); font-size: 0.72rem; font-weight: 700; padding: 0.25rem 0.7rem; border-radius: 50px; }
+    .applicant-row {
+      display: flex; align-items: center; gap: 0.8rem; padding: 0.85rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .applicant-row:last-of-type { border-bottom: none; }
+    .av {
+      width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; font-family: var(--font-display); font-weight: 800;
+      font-size: 0.85rem; color: #000; flex-shrink: 0;
+    }
+    .ap-info { flex: 1; }
+    .ap-name { font-size: 0.85rem; font-weight: 600; color: var(--white); }
+    .ap-skill { font-size: 0.75rem; color: var(--text-muted); }
+    .ap-score { font-size: 0.8rem; font-weight: 700; color: var(--accent); }
+    .dash-footer {
+      margin-top: 1rem; background: var(--bg2); border-radius: 12px; padding: 1rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .dash-stat { text-align: center; }
+    .dash-stat-num { font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; color: var(--white); }
+    .dash-stat-label { font-size: 0.7rem; color: var(--text-muted); }
+
+    /* ── SECTIONS ── */
+    section { padding: 90px 5%; }
+    .section-label {
+      display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 0.8rem;
+    }
+    .section-title {
+      font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800; color: var(--white); letter-spacing: -0.5px; line-height: 1.15; margin-bottom: 0.8rem;
+    }
+    .section-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 540px; line-height: 1.7; }
+    .section-header { margin-bottom: 3.5rem; }
+    .section-header.center { text-align: center; }
+    .section-header.center .section-sub { margin: 0 auto; }
+
+    /* ── WHY FUNNGRO ── */
+    .why { background: var(--bg2); }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .why-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 2rem; position: relative; overflow: hidden; transition: border-color .25s, transform .25s;
+    }
+    .why-card:hover { border-color: rgba(0,212,170,0.3); transform: translateY(-4px); }
+    .why-card.large { grid-column: span 2; display: flex; gap: 2rem; align-items: flex-start; }
+    .why-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; flex-shrink: 0; margin-bottom: 1.2rem;
+    }
+    .why-icon.teal { background: rgba(0,212,170,0.12); color: var(--accent); }
+    .why-icon.blue { background: rgba(0,153,255,0.12); color: var(--accent2); }
+    .why-icon.purple { background: rgba(124,58,237,0.12); color: #a78bfa; }
+    .why-icon.orange { background: rgba(245,166,35,0.12); color: #f5a623; }
+    .why-card h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+    .why-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
+    .why-metric {
+      font-family: var(--font-display); font-size: 2.4rem; font-weight: 800;
+      color: var(--accent); margin-top: 1rem; line-height: 1;
+    }
+    .why-metric span { font-size: 1rem; color: var(--text-muted); font-weight: 400; font-family: var(--font-body); }
+
+    /* ── SERVICES ── */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+    .service-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 2rem 1.5rem; text-align: center; transition: border-color .25s, transform .25s;
+      position: relative; overflow: hidden;
+    }
+    .service-card::before {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      transform: scaleX(0); transition: transform .3s;
+    }
+    .service-card:hover { border-color: rgba(0,212,170,0.25); transform: translateY(-5px); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon {
+      width: 60px; height: 60px; border-radius: 18px; margin: 0 auto 1.2rem;
+      display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+    }
+    .service-card h3 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+    .service-card p { font-size: 0.87rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1rem; }
+    .service-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; }
+    .stag {
+      font-size: 0.72rem; background: rgba(255,255,255,0.05); color: var(--text-muted);
+      padding: 0.2rem 0.6rem; border-radius: 50px; border: 1px solid var(--border);
+    }
+
+    /* ── COMPARISON ── */
+    .compare { background: var(--bg2); }
+    .compare-table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--border); }
+    .compare-table { width: 100%; border-collapse: collapse; }
+    .compare-table th {
+      padding: 1.2rem 1.5rem; text-align: left; font-family: var(--font-display);
+      font-size: 0.88rem; font-weight: 700; background: var(--surface2); color: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .compare-table th.highlight { background: rgba(0,212,170,0.1); color: var(--accent); }
+    .compare-table td {
+      padding: 1.1rem 1.5rem; font-size: 0.9rem; color: var(--text-muted);
+      border-bottom: 1px solid var(--border); vertical-align: middle;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table td.highlight { background: rgba(0,212,170,0.04); }
+    .compare-table td:first-child { color: var(--text); font-weight: 500; }
+    .check { color: var(--accent); font-size: 1rem; }
+    .cross { color: #4a5568; font-size: 1rem; }
+    .compare-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .compare-table tr:hover td.highlight { background: rgba(0,212,170,0.06); }
+
+    /* ── PROCESS ── */
+    .process-steps { display: flex; gap: 0; position: relative; flex-wrap: wrap; }
+    .process-steps::before {
+      content: ''; position: absolute; top: 28px; left: 28px; right: 28px; height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3));
+      opacity: 0.3;
+    }
+    .proc-step {
+      flex: 1; min-width: 180px; text-align: center; padding: 0 1rem; position: relative;
+    }
+    .proc-num {
+      width: 56px; height: 56px; border-radius: 50%; border: 2px solid var(--accent);
+      display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;
+      font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; color: var(--accent);
+      background: var(--bg); position: relative; z-index: 1;
+    }
+    .proc-step h3 { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 0.4rem; }
+    .proc-step p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.55; }
+
+    /* ── PRICING ── */
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+    .pricing-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 2rem; text-align: center; transition: border-color .25s, transform .25s; position: relative;
+    }
+    .pricing-card.featured {
+      border-color: rgba(0,212,170,0.4); background: linear-gradient(135deg, rgba(0,212,170,0.06), rgba(0,153,255,0.04));
+    }
+    .pricing-card:hover { transform: translateY(-4px); }
+    .pricing-badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--accent); color: #000; font-size: 0.72rem; font-weight: 800;
+      padding: 0.25rem 1rem; border-radius: 50px; letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .pricing-plan { font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.8rem; }
+    .pricing-price { font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: var(--white); }
+    .pricing-price sup { font-size: 1rem; vertical-align: top; margin-top: 0.6rem; display: inline-block; }
+    .pricing-price sub { font-size: 0.9rem; color: var(--text-muted); font-weight: 400; font-family: var(--font-body); }
+    .pricing-desc { font-size: 0.85rem; color: var(--text-muted); margin: 0.8rem 0 1.5rem; }
+    .pricing-features { text-align: left; margin-bottom: 2rem; }
+    .pf { display: flex; align-items: center; gap: 0.6rem; font-size: 0.87rem; color: var(--text); margin-bottom: 0.6rem; }
+    .pf i { color: var(--accent); font-size: 0.8rem; flex-shrink: 0; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .testi-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 1.8rem; transition: border-color .25s, transform .25s;
+    }
+    .testi-card:hover { border-color: rgba(0,212,170,0.25); transform: translateY(-3px); }
+    .testi-logo { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+    .testi-stars { color: var(--accent); font-size: 0.85rem; margin-bottom: 1rem; }
+    .testi-text { font-size: 0.92rem; color: var(--text); line-height: 1.75; margin-bottom: 1.5rem; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 0.8rem; }
+    .testi-avatar {
+      width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; font-family: var(--font-display); font-weight: 800;
+      font-size: 0.9rem; color: #fff; flex-shrink: 0;
+    }
+    .testi-name { font-weight: 600; color: var(--white); font-size: 0.9rem; }
+    .testi-meta { font-size: 0.78rem; color: var(--text-muted); }
+
+    /* ── CTA ── */
+    .cta-section {
+      text-align: center;
+      background: linear-gradient(135deg, rgba(0,212,170,0.06) 0%, rgba(0,153,255,0.04) 50%, rgba(124,58,237,0.04) 100%);
+      position: relative; overflow: hidden;
+    }
+    .cta-section::before {
+      content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+      width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,212,170,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-section > * { position: relative; z-index: 1; }
+    .cta-section .section-title { margin-bottom: 1rem; }
+    .cta-section p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 2.2rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .cta-note { margin-top: 1.5rem; font-size: 0.82rem; color: var(--text-dim); }
+    .cta-note i { color: var(--accent); margin-right: 0.3rem; }
+
+    /* ── FOOTER ── */
+    footer { background: #040609; border-top: 1px solid var(--border); padding: 60px 5% 30px; }
+    .footer-top { display: flex; gap: 3rem; flex-wrap: wrap; margin-bottom: 3rem; }
+    .footer-brand { flex: 2; min-width: 220px; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--white); margin-bottom: 0.8rem; }
+    .footer-logo span { color: var(--accent); }
+    .footer-brand p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; max-width: 300px; }
+    .footer-social { display: flex; gap: 0.8rem; margin-top: 1.2rem; }
+    .social-link {
+      width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      background: var(--surface); border: 1px solid var(--border); color: var(--text-muted);
+      text-decoration: none; font-size: 0.9rem; transition: color .2s, border-color .2s;
+    }
+    .social-link:hover { color: var(--accent); border-color: rgba(0,212,170,0.35); }
+    .footer-col { min-width: 150px; }
+    .footer-col h4 { font-family: var(--font-display); font-weight: 700; color: var(--white); font-size: 0.9rem; margin-bottom: 1rem; }
+    .footer-col a { display: block; font-size: 0.85rem; color: var(--text-muted); text-decoration: none; margin-bottom: 0.6rem; transition: color .2s; }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom {
+      border-top: 1px solid var(--border); padding-top: 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.82rem; color: var(--text-dim); gap: 1rem; flex-wrap: wrap;
+    }
+    .footer-bottom span { color: var(--accent); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes float { 0%,100% { transform: translateY(-50%) translateY(0px); } 50% { transform: translateY(-50%) translateY(-10px); } }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-visual { display: none; }
+      .hero-content { max-width: 100%; }
+      .why-card.large { grid-column: span 1; flex-direction: column; }
+      .why-grid { grid-template-columns: 1fr; }
+      .process-steps::before { display: none; }
+    }
+    @media (max-width: 640px) {
+      nav { padding: 0 4%; }
+      .nav-links { display: none; }
+      .hamburger { display: block; }
+      section { padding: 70px 4%; }
+      .hero { padding: 110px 4% 70px; }
+      .footer-top { flex-direction: column; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .proc-step { min-width: 140px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="company.html" class="nav-logo">Funng<span>ro</span></a>
+  <div class="nav-links">
+    <a href="teen.html">For Teens</a>
+    <a href="company.html" class="active">For Companies</a>
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="company.html#contact" class="nav-pill">Post a Task</a>
+  </div>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><i class="fas fa-bars"></i></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="teen.html">For Teens</a>
+  <a href="company.html">For Companies</a>
+  <a href="#services">Services</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#contact">Post a Task →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><i class="fas fa-star"></i> Trusted by 200+ Startups & Brands</div>
+    <h1>Hire <em>Skilled</em><br />Teen Talent</h1>
+    <p>Access India's largest pool of verified, motivated teen talent. Get quality digital work done 60% faster and at a fraction of agency costs — without compromising on results.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn-primary"><i class="fas fa-briefcase"></i> Post Your First Task</a>
+      <a href="#services" class="btn-outline"><i class="fas fa-eye"></i> See Our Services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">50K+</div><div class="stat-label">Vetted Teen Talent</div></div>
+      <div class="stat"><div class="stat-num">24hr</div><div class="stat-label">Average Delivery</div></div>
+      <div class="stat"><div class="stat-num">98%</div><div class="stat-label">Satisfaction Rate</div></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="dash-card">
+      <div class="dash-header">
+        <span class="dash-title">🎯 Task Applicants</span>
+        <span class="dash-badge">12 New</span>
+      </div>
+      <div class="applicant-row">
+        <div class="av" style="background:linear-gradient(135deg,#00d4aa,#0099ff)">A</div>
+        <div class="ap-info"><div class="ap-name">Aarav Sharma</div><div class="ap-skill">Content Writing · 4.9★</div></div>
+        <span class="ap-score">Top Pick</span>
+      </div>
+      <div class="applicant-row">
+        <div class="av" style="background:linear-gradient(135deg,#f5a623,#ff6b35)">P</div>
+        <div class="ap-info"><div class="ap-name">Priya Nair</div><div class="ap-skill">Graphic Design · 4.8★</div></div>
+        <span class="ap-score">Verified</span>
+      </div>
+      <div class="applicant-row">
+        <div class="av" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)">R</div>
+        <div class="ap-info"><div class="ap-name">Rohan Mehta</div><div class="ap-skill">App Testing · 4.9★</div></div>
+        <span class="ap-score">Pro</span>
+      </div>
+      <div class="dash-footer">
+        <div class="dash-stat"><div class="dash-stat-num" style="color:var(--accent)">₹980</div><div class="dash-stat-label">Avg Task Cost</div></div>
+        <div class="dash-stat"><div class="dash-stat-num">18h</div><div class="dash-stat-label">Avg Delivery</div></div>
+        <div class="dash-stat"><div class="dash-stat-num" style="color:#68d391">98%</div><div class="dash-stat-label">Satisfaction</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY FUNNGRO -->
+<section class="why" id="why">
+  <div class="section-header">
+    <span class="section-label">Why Funngro</span>
+    <h2 class="section-title">The Smarter Way to Get<br />Digital Work Done</h2>
+    <p class="section-sub">Stop overpaying agencies. Stop waiting weeks for freelancers. Get high-quality digital work from motivated young talent who are eager to prove themselves.</p>
+  </div>
+  <div class="why-grid">
+    <article class="why-card">
+      <div class="why-icon teal"><i class="fas fa-bolt"></i></div>
+      <h3>Lightning Fast Delivery</h3>
+      <p>Most tasks completed within 24 hours. Our teens are digitally native, quick learners, and highly motivated to deliver quality work on time.</p>
+      <div class="why-metric">24h <span>avg delivery</span></div>
+    </article>
+    <article class="why-card">
+      <div class="why-icon blue"><i class="fas fa-piggy-bank"></i></div>
+      <h3>Save Up to 70% vs Agencies</h3>
+      <p>Pay only for what you need. No retainers, no overhead, no surprise fees. Fair pricing that's honest for both your business and our teen talent.</p>
+      <div class="why-metric">70% <span>cost saving</span></div>
+    </article>
+    <article class="why-card">
+      <div class="why-icon purple"><i class="fas fa-shield-check"></i></div>
+      <h3>100% Verified Talent Pool</h3>
+      <p>Every teen on Funngro is ID-verified, has completed skill assessments, and has parental consent. Quality you can trust from day one.</p>
+      <div class="why-metric">50K+ <span>verified teens</span></div>
+    </article>
+    <article class="why-card">
+      <div class="why-icon orange"><i class="fas fa-redo"></i></div>
+      <h3>Free Revisions Guaranteed</h3>
+      <p>Not satisfied? Every task comes with free revisions until you're 100% happy. If we still can't deliver, you get a full refund — no questions asked.</p>
+      <div class="why-metric">100% <span>satisfaction guarantee</span></div>
+    </article>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-header center">
+    <span class="section-label">Services</span>
+    <h2 class="section-title">Everything Your Business Needs</h2>
+    <p class="section-sub">From content creation to tech testing, our teen talent covers the full spectrum of digital services your startup needs to grow.</p>
+  </div>
+  <div class="services-grid">
+    <article class="service-card">
+      <div class="service-icon" style="background:rgba(0,212,170,0.1)"><span style="font-size:1.5rem">📱</span></div>
+      <h3>Social Media Marketing</h3>
+      <p>Reels scripts, caption writing, posting schedules, engagement campaigns, and influencer-style content — created by teens who actually use these platforms.</p>
+      <div class="service-tags">
+        <span class="stag">Instagram</span><span class="stag">YouTube</span><span class="stag">Reels</span><span class="stag">Threads</span>
+      </div>
+    </article>
+    <article class="service-card">
+      <div class="service-icon" style="background:rgba(0,153,255,0.1)"><span style="font-size:1.5rem">🎨</span></div>
+      <h3>Design & Creatives</h3>
+      <p>Social media graphics, logo concepts, presentation decks, infographics, and brand collateral. Fresh, modern designs at incredible value.</p>
+      <div class="service-tags">
+        <span class="stag">Canva</span><span class="stag">Figma</span><span class="stag">Illustrator</span><span class="stag">Photoshop</span>
+      </div>
+    </article>
+    <article class="service-card">
+      <div class="service-icon" style="background:rgba(124,58,237,0.1)"><span style="font-size:1.5rem">✍️</span></div>
+      <h3>Content Writing</h3>
+      <p>Blog posts, product descriptions, email newsletters, website copy, and SEO content. Authentic Gen-Z voice that connects with young audiences.</p>
+      <div class="service-tags">
+        <span class="stag">SEO Blogs</span><span class="stag">Product Copy</span><span class="stag">Emails</span>
+      </div>
+    </article>
+    <article class="service-card">
+      <div class="service-icon" style="background:rgba(245,166,35,0.1)"><span style="font-size:1.5rem">🐛</span></div>
+      <h3>App & UX Testing</h3>
+      <p>Real user testing from your target demographic. Detailed bug reports, UX feedback, and usability reviews from actual Gen-Z users.</p>
+      <div class="service-tags">
+        <span class="stag">Bug Reports</span><span class="stag">UX Feedback</span><span class="stag">Usability</span>
+      </div>
+    </article>
+    <article class="service-card">
+      <div class="service-icon" style="background:rgba(99,179,237,0.1)"><span style="font-size:1.5rem">📊</span></div>
+      <h3>Data & Research</h3>
+      <p>Data entry, market research, competitor analysis, lead enrichment, and survey tasks. Accurate, thorough, and delivered fast.</p>
+      <div class="service-tags">
+        <span class="stag">Excel</span><span class="stag">Research</span><span class="stag">Surveys</span>
+      </div>
+    </article>
+    <article class="service-card">
+      <div class="service-icon" style="background:rgba(104,211,145,0.1)"><span style="font-size:1.5rem">🎬</span></div>
+      <h3>Video & Reels Editing</h3>
+      <p>Short-form video editing, reels creation, subtitles, background music, and transitions. Perfect for brands going big on video content.</p>
+      <div class="service-tags">
+        <span class="stag">Reels</span><span class="stag">CapCut</span><span class="stag">Premiere</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="compare" id="compare">
+  <div class="section-header center">
+    <span class="section-label">The Smart Choice</span>
+    <h2 class="section-title">Funngro vs The Alternatives</h2>
+    <p class="section-sub">See why 200+ companies have switched to Funngro for their digital work needs.</p>
+  </div>
+  <div class="compare-table-wrap">
+    <table class="compare-table" role="table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th class="highlight">✦ Funngro</th>
+          <th>Freelance Platforms</th>
+          <th>Digital Agencies</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Average Task Cost</td>
+          <td class="highlight" style="color:var(--accent); font-weight:700">₹500–₹2,000</td>
+          <td>₹2,000–₹8,000</td>
+          <td>₹10,000–₹50,000</td>
+        </tr>
+        <tr>
+          <td>Delivery Time</td>
+          <td class="highlight" style="color:var(--accent); font-weight:700">Within 24 hours</td>
+          <td>3–7 days</td>
+          <td>1–4 weeks</td>
+        </tr>
+        <tr>
+          <td>Free Revisions</td>
+          <td class="highlight"><i class="fas fa-check check"></i> Unlimited</td>
+          <td>1–2 revisions</td>
+          <td>1 revision (charged)</td>
+        </tr>
+        <tr>
+          <td>Quality Guarantee</td>
+          <td class="highlight"><i class="fas fa-check check"></i> Full refund policy</td>
+          <td><i class="fas fa-times cross"></i> Limited</td>
+          <td><i class="fas fa-times cross"></i> Contract dependent</td>
+        </tr>
+        <tr>
+          <td>Gen-Z Audience Insight</td>
+          <td class="highlight"><i class="fas fa-check check"></i> Native</td>
+          <td><i class="fas fa-times cross"></i> Not guaranteed</td>
+          <td><i class="fas fa-times cross"></i> Rarely</td>
+        </tr>
+        <tr>
+          <td>Zero Retainer / Setup Fee</td>
+          <td class="highlight"><i class="fas fa-check check"></i> Always free</td>
+          <td><i class="fas fa-check check"></i> Free but commissions</td>
+          <td><i class="fas fa-times cross"></i> High setup cost</td>
+        </tr>
+        <tr>
+          <td>Dedicated Support</td>
+          <td class="highlight"><i class="fas fa-check check"></i> 24/7 via chat</td>
+          <td><i class="fas fa-times cross"></i> Self-service only</td>
+          <td><i class="fas fa-check check"></i> Account manager</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-header center">
+    <span class="section-label">How It Works</span>
+    <h2 class="section-title">From Requirement to Delivery<br />in 4 Simple Steps</h2>
+  </div>
+  <div class="process-steps">
+    <div class="proc-step">
+      <div class="proc-num">1</div>
+      <h3>Post Your Task</h3>
+      <p>Describe what you need in plain language. Set a budget and deadline. It takes under 5 minutes.</p>
+    </div>
+    <div class="proc-step">
+      <div class="proc-num">2</div>
+      <h3>Get Matched</h3>
+      <p>Our AI matches your task to the best-fit teen talent from our verified pool within minutes.</p>
+    </div>
+    <div class="proc-step">
+      <div class="proc-num">3</div>
+      <h3>Review Submissions</h3>
+      <p>Receive completed work, request revisions if needed, and approve with one click.</p>
+    </div>
+    <div class="proc-step">
+      <div class="proc-num">4</div>
+      <h3>Pay on Approval</h3>
+      <p>Payment is released only when you're satisfied. Zero risk, zero commitment upfront.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" style="background:var(--bg2)">
+  <div class="section-header center">
+    <span class="section-label">Pricing</span>
+    <h2 class="section-title">Transparent, Fair Pricing</h2>
+    <p class="section-sub">No hidden fees. No retainers. Pay only for the work you approve.</p>
+  </div>
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <div class="pricing-plan">Starter</div>
+      <div class="pricing-price"><sup>₹</sup>0 <sub>/month</sub></div>
+      <div class="pricing-desc">Perfect for trying Funngro with no commitment.</div>
+      <div class="pricing-features">
+        <div class="pf"><i class="fas fa-check-circle"></i> 5 tasks per month</div>
+        <div class="pf"><i class="fas fa-check-circle"></i> Access to all service categories</div>
+        <div class="pf"><i class="fas fa-check-circle"></i> 1 free revision per task</div>
+        <div class="pf"><i class="fas fa-check-circle"></i> Email support</div>
+        <div class="pf"><i class="fas fa-check-circle"></i> 48-hour delivery SLA</div>
+      </div>
+      <a href="#contact" class="btn-outline" style="width:100%; justify-content:center">Get Started Free</a>
+    </div>
+    <div class="pricing-card featured">
+      <div class="pricing-badge">Most Popular</div>
+      <div class="pricing-plan">Growth</div>
+      <div class="pricing-price"><sup>₹</sup>2,999 <sub>/month</sub></div>
+      <div class="pricing-desc">For startups & SMBs that need consistent output.</div>
+      <div class="pricing-features">
+        <div class="pf"><i class="fas fa-check-circle"></i> 30 tasks per month</div>
+        <div class="pf"><i class="fas fa-check-circle"></i> Priority matching (top-rated teens)</div>
+        <div class="pf"><i class="fas fa-check-circle"></i> Unlimited free revisions</div>
+        <div class="pf"><i class="fas fa-check-circle"></i> 24-hour delivery SLA</div>
+        <div class="pf"><i class="fas fa-check-circle"></i> Dedicated account manager</div>
+        <div class="pf"><i class="fas fa-check-circle"></i> Monthly performance report</div>
+      </div>
+      <a href="#contact" class="btn-primary" style="width:100%; justify-content:center">Start Free Trial</a>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-plan">Enterprise</div>
+      <div class="pricing-price" style="font-size:2rem">Custom</div>
+      <div class="pricing-desc">For brands and agencies with high-volume needs.</div>
+      <div class="pricing-features">
+        <div class="pf"><i class="fas fa-check-circle"></i> Unlimited tasks</div>
+        <div class="pf"><i class="fas fa-check-circle"></i> Dedicated teen talent team</div>
+        <div class="pf"><i class="fas fa-check-circle"></i> Custom SLA & NDA options</div>
+        <div class="pf"><i class="fas fa-check-circle"></i> White-label delivery option</div>
+        <div class="pf"><i class="fas fa-check-circle"></i> API integration available</div>
+        <div class="pf"><i class="fas fa-check-circle"></i> Quarterly strategy call</div>
+      </div>
+      <a href="#contact" class="btn-outline" style="width:100%; justify-content:center">Contact Sales</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-header center">
+    <span class="section-label">Client Stories</span>
+    <h2 class="section-title">Companies That Love Funngro</h2>
+    <p class="section-sub">From early-stage startups to established brands — here's what they say.</p>
+  </div>
+  <div class="testimonials-grid">
+    <article class="testi-card">
+      <div class="testi-logo">🚀 LaunchPad Technologies</div>
+      <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p class="testi-text">"We posted a social media task and had 8 applicants within 2 hours. The quality was honestly better than what we were paying an agency 5x the price for. Funngro is now our go-to for all content needs."</p>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background:linear-gradient(135deg,#00d4aa,#0099ff)">V</div>
+        <div>
+          <div class="testi-name">Vikram Reddy</div>
+          <div class="testi-meta">Founder & CEO · Bangalore</div>
+        </div>
+      </div>
+    </article>
+    <article class="testi-card">
+      <div class="testi-logo">🛍️ StyleSquad Fashion</div>
+      <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p class="testi-text">"Our Instagram engagement jumped 180% after switching to Funngro-created content. These teens know what resonates with our audience better than any marketing consultant we've hired."</p>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background:linear-gradient(135deg,#f5a623,#ff6b35)">N</div>
+        <div>
+          <div class="testi-name">Neha Agarwal</div>
+          <div class="testi-meta">Head of Marketing · Mumbai</div>
+        </div>
+      </div>
+    </article>
+    <article class="testi-card">
+      <div class="testi-logo">💻 DevBridge Solutions</div>
+      <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p class="testi-text">"The app testing reports from Funngro teens caught 23 bugs our internal team missed. Their fresh perspective as actual end-users was invaluable. Will use again for every launch."</p>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)">A</div>
+        <div>
+          <div class="testi-name">Arjun Kapoor</div>
+          <div class="testi-meta">CTO · Hyderabad</div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <span class="section-label">Get Started Today</span>
+  <h2 class="section-title">Post Your First Task — Free</h2>
+  <p>Join 200+ companies already tapping into India's most motivated young talent pool. No setup fee, no commitment.</p>
+  <div class="cta-buttons">
+    <a href="#contact" class="btn-primary"><i class="fas fa-plus-circle"></i> Post a Task Now</a>
+    <a href="#" class="btn-outline"><i class="fas fa-calendar-alt"></i> Book a Demo Call</a>
+  </div>
+  <div class="cta-note"><i class="fas fa-shield-alt"></i> No credit card required · First task free · Cancel anytime</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">Funng<span>ro</span></div>
+      <p>India's leading platform connecting businesses with verified, skilled teen talent. Get quality digital work done fast, affordably, and with a social impact.</p>
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#">Social Media</a>
+      <a href="#">Content Writing</a>
+      <a href="#">Design & Creatives</a>
+      <a href="#">App Testing</a>
+      <a href="#">Data Entry</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="teen.html">For Teens</a>
+      <a href="#">About Us</a>
+      <a href="#">Careers</a>
+      <a href="#">Blog</a>
+      <a href="#">Press Kit</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a href="#">Help Center</a>
+      <a href="#">Pricing FAQ</a>
+      <a href="#">API Docs</a>
+      <a href="#">Community</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:business@funngro.com"><i class="fas fa-envelope" style="margin-right:6px; color:var(--accent)"></i> business@funngro.com</a>
+      <a href="tel:+918000123457"><i class="fas fa-phone" style="margin-right:6px; color:var(--accent)"></i> +91 80001 23457</a>
+      <a href="#"><i class="fas fa-map-marker-alt" style="margin-right:6px; color:var(--accent)"></i> Bengaluru, India</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2024 <span>Funngro</span>. All rights reserved.</div>
+    <div style="display:flex; gap:1.5rem; flex-wrap:wrap">
+      <a href="#" style="color:var(--text-dim); text-decoration:none; transition:color .2s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-dim)'">Privacy Policy</a>
+      <a href="#" style="color:var(--text-dim); text-decoration:none; transition:color .2s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-dim)'">Terms of Service</a>
+      <a href="#" style="color:var(--text-dim); text-decoration:none; transition:color .2s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-dim)'">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.why-card, .service-card, .testi-card, .proc-step, .pricing-card').forEach(el => {
+    el.style.opacity = '0'; el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease, border-color 0.25s, box-shadow 0.25s';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>

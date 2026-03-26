@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funngro for Teens – Earn Money, Build Skills & Gain Real Experience</title>
+  <meta name="description" content="Funngro helps teenagers earn real money by completing tasks for companies. Build skills, gain work experience, and get paid — all from your phone." />
+  <meta name="keywords" content="earn money as a teen, teen jobs online, students earn money, teen freelance, Funngro teens" />
+  <meta name="author" content="Funngro" />
+  <meta property="og:title" content="Funngro – Earn Money as a Teen" />
+  <meta property="og:description" content="Complete real tasks for companies, build your portfolio, and get paid. Join thousands of teens already earning with Funngro." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #080b14;
+      --bg2: #0d1220;
+      --bg3: #111827;
+      --surface: #141c2e;
+      --border: rgba(255,255,255,0.07);
+      --accent: #f5a623;
+      --accent2: #ff6b35;
+      --accent-glow: rgba(245,166,35,0.25);
+      --text: #e8eaf0;
+      --text-muted: #8892a4;
+      --text-dim: #4a5568;
+      --white: #ffffff;
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 16px; line-height: 1.65; overflow-x: hidden; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 70px;
+      background: rgba(8,11,20,0.85);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); }
+    .nav-pill {
+      background: var(--accent); color: #000; padding: 0.45rem 1.1rem; border-radius: 50px;
+      font-weight: 700; font-size: 0.85rem; text-decoration: none; transition: opacity .2s, transform .2s;
+    }
+    .nav-pill:hover { opacity: 0.88; transform: translateY(-1px); color: #000; }
+    .hamburger { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; }
+    .mobile-menu {
+      display: none; flex-direction: column; gap: 1rem;
+      position: fixed; top: 70px; left: 0; right: 0;
+      background: var(--bg2); padding: 1.5rem 5%;
+      border-bottom: 1px solid var(--border); z-index: 99;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: var(--text); text-decoration: none; font-size: 1rem; font-weight: 500; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh; padding: 120px 5% 80px;
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background: radial-gradient(ellipse 70% 60% at 60% 30%, rgba(245,166,35,0.12) 0%, transparent 70%),
+                  radial-gradient(ellipse 50% 50% at 15% 80%, rgba(255,107,53,0.08) 0%, transparent 60%),
+                  var(--bg);
+    }
+    .hero-grid {
+      position: absolute; inset: 0; z-index: 0; opacity: 0.03;
+      background-image: linear-gradient(var(--white) 1px, transparent 1px), linear-gradient(90deg, var(--white) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 680px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(245,166,35,0.12); border: 1px solid rgba(245,166,35,0.3);
+      color: var(--accent); padding: 0.4rem 1rem; border-radius: 50px;
+      font-size: 0.82rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+      margin-bottom: 1.5rem; animation: fadeUp .6s ease both;
+    }
+    .hero h1 {
+      font-family: var(--font-display); font-size: clamp(2.6rem, 6vw, 4.4rem);
+      font-weight: 800; line-height: 1.05; letter-spacing: -1.5px;
+      color: var(--white); margin-bottom: 1.2rem;
+      animation: fadeUp .6s .1s ease both;
+    }
+    .hero h1 em { font-style: normal; color: var(--accent); }
+    .hero p {
+      font-size: 1.15rem; color: var(--text-muted); max-width: 520px; line-height: 1.75;
+      margin-bottom: 2.2rem; font-weight: 300;
+      animation: fadeUp .6s .2s ease both;
+    }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp .6s .3s ease both; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--accent); color: #000; padding: 0.85rem 2rem;
+      border-radius: 50px; font-weight: 700; font-size: 1rem; text-decoration: none;
+      transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 0 30px var(--accent-glow);
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 40px rgba(245,166,35,0.4); }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: transparent; color: var(--text); padding: 0.85rem 2rem;
+      border-radius: 50px; border: 1px solid var(--border); font-weight: 600; font-size: 1rem;
+      text-decoration: none; transition: border-color .2s, color .2s;
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .hero-stats {
+      display: flex; gap: 2.5rem; margin-top: 3rem; flex-wrap: wrap;
+      animation: fadeUp .6s .4s ease both;
+    }
+    .stat { }
+    .stat-num { font-family: var(--font-display); font-size: 1.9rem; font-weight: 800; color: var(--white); }
+    .stat-label { font-size: 0.82rem; color: var(--text-dim); margin-top: 0.1rem; }
+    .hero-visual {
+      position: absolute; right: 5%; top: 50%; transform: translateY(-50%);
+      width: 380px; z-index: 1;
+      animation: floatUp 1s ease both;
+    }
+    .phone-mockup {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 28px; padding: 1.5rem; box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+      position: relative;
+    }
+    .phone-mockup::before {
+      content: ''; position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+      width: 80px; height: 4px; background: var(--bg3); border-radius: 0 0 8px 8px;
+    }
+    .phone-inner { background: var(--bg); border-radius: 18px; padding: 1.2rem; overflow: hidden; }
+    .task-card {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 12px;
+      padding: 1rem 1.2rem; margin-bottom: 0.8rem;
+      display: flex; align-items: center; gap: 0.8rem;
+    }
+    .task-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+    .task-icon.orange { background: rgba(245,166,35,0.15); color: var(--accent); }
+    .task-icon.red { background: rgba(255,107,53,0.15); color: var(--accent2); }
+    .task-icon.blue { background: rgba(99,179,237,0.15); color: #63b3ed; }
+    .task-info { flex: 1; min-width: 0; }
+    .task-title { font-size: 0.8rem; font-weight: 600; color: var(--white); }
+    .task-sub { font-size: 0.72rem; color: var(--text-muted); }
+    .task-earn { font-size: 0.85rem; font-weight: 700; color: var(--accent); }
+    .earn-banner {
+      background: linear-gradient(135deg, rgba(245,166,35,0.15), rgba(255,107,53,0.1));
+      border: 1px solid rgba(245,166,35,0.25); border-radius: 12px;
+      padding: 1rem; text-align: center; margin-top: 0.5rem;
+    }
+    .earn-banner .amount { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: var(--accent); }
+    .earn-banner .label { font-size: 0.72rem; color: var(--text-muted); }
+
+    /* ── SECTIONS ── */
+    section { padding: 90px 5%; }
+    .section-label {
+      display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 0.8rem;
+    }
+    .section-title {
+      font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800; color: var(--white); letter-spacing: -0.5px; line-height: 1.15;
+      margin-bottom: 0.8rem;
+    }
+    .section-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 540px; line-height: 1.7; }
+    .section-header { margin-bottom: 3.5rem; }
+    .section-header.center { text-align: center; }
+    .section-header.center .section-sub { margin: 0 auto; }
+
+    /* ── HOW IT WORKS ── */
+    .how { background: var(--bg2); }
+    .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+    .step-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 2rem 1.5rem; position: relative; overflow: hidden;
+      transition: border-color .25s, transform .25s;
+    }
+    .step-card:hover { border-color: rgba(245,166,35,0.4); transform: translateY(-4px); }
+    .step-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2)); opacity: 0;
+      transition: opacity .25s;
+    }
+    .step-card:hover::before { opacity: 1; }
+    .step-num {
+      font-family: var(--font-display); font-size: 3.5rem; font-weight: 800;
+      color: rgba(245,166,35,0.1); line-height: 1; margin-bottom: 1rem;
+    }
+    .step-icon { font-size: 1.6rem; color: var(--accent); margin-bottom: 1rem; }
+    .step-title { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+    .step-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* ── BENEFITS ── */
+    .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .benefit-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 1.8rem; transition: border-color .25s, transform .25s;
+    }
+    .benefit-card:hover { border-color: rgba(245,166,35,0.3); transform: translateY(-3px); }
+    .benefit-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; margin-bottom: 1.2rem;
+      background: rgba(245,166,35,0.1); color: var(--accent);
+    }
+    .benefit-title { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+    .benefit-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
+
+    /* ── TASKS ── */
+    .tasks { background: var(--bg2); }
+    .tasks-flex { display: flex; gap: 3rem; align-items: center; flex-wrap: wrap; }
+    .tasks-left { flex: 1; min-width: 300px; }
+    .tasks-right { flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 1rem; }
+    .task-type {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);
+      padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem;
+      transition: border-color .2s;
+    }
+    .task-type:hover { border-color: rgba(245,166,35,0.35); }
+    .task-type-icon { font-size: 1.4rem; width: 44px; text-align: center; }
+    .task-type-info { flex: 1; }
+    .task-type-name { font-weight: 600; color: var(--white); font-size: 0.95rem; }
+    .task-type-range { font-size: 0.8rem; color: var(--text-muted); }
+    .task-type-tag {
+      font-size: 0.72rem; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 50px;
+      background: rgba(245,166,35,0.12); color: var(--accent); border: 1px solid rgba(245,166,35,0.2);
+    }
+    .tag-hot { background: rgba(255,107,53,0.12); color: var(--accent2); border-color: rgba(255,107,53,0.2); }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .testi-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 1.8rem; transition: border-color .25s, transform .25s;
+    }
+    .testi-card:hover { border-color: rgba(245,166,35,0.25); transform: translateY(-3px); }
+    .testi-stars { color: var(--accent); font-size: 0.85rem; margin-bottom: 1rem; }
+    .testi-text { font-size: 0.95rem; color: var(--text); line-height: 1.75; margin-bottom: 1.5rem; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 0.8rem; }
+    .testi-avatar {
+      width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; font-family: var(--font-display); font-weight: 800;
+      font-size: 0.9rem; color: #000; flex-shrink: 0;
+    }
+    .testi-name { font-weight: 600; color: var(--white); font-size: 0.9rem; }
+    .testi-meta { font-size: 0.78rem; color: var(--text-muted); }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: var(--bg2); text-align: center;
+      background-image: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(245,166,35,0.08) 0%, transparent 70%);
+    }
+    .cta-section .section-title { margin-bottom: 1rem; }
+    .cta-section p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 2.2rem; }
+    .cta-section .btn-primary { display: inline-flex; font-size: 1.1rem; padding: 1rem 2.5rem; }
+    .cta-note { margin-top: 1rem; font-size: 0.82rem; color: var(--text-dim); }
+    .cta-note i { color: var(--accent); margin-right: 0.3rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #050810; border-top: 1px solid var(--border);
+      padding: 60px 5% 30px;
+    }
+    .footer-top { display: flex; gap: 3rem; flex-wrap: wrap; margin-bottom: 3rem; }
+    .footer-brand { flex: 2; min-width: 220px; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--white); margin-bottom: 0.8rem; }
+    .footer-logo span { color: var(--accent); }
+    .footer-brand p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; max-width: 300px; }
+    .footer-social { display: flex; gap: 0.8rem; margin-top: 1.2rem; }
+    .social-link {
+      width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      background: var(--surface); border: 1px solid var(--border); color: var(--text-muted);
+      text-decoration: none; font-size: 0.9rem; transition: color .2s, border-color .2s;
+    }
+    .social-link:hover { color: var(--accent); border-color: rgba(245,166,35,0.35); }
+    .footer-col { min-width: 150px; }
+    .footer-col h4 { font-family: var(--font-display); font-weight: 700; color: var(--white); font-size: 0.9rem; margin-bottom: 1rem; }
+    .footer-col a { display: block; font-size: 0.85rem; color: var(--text-muted); text-decoration: none; margin-bottom: 0.6rem; transition: color .2s; }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom {
+      border-top: 1px solid var(--border); padding-top: 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: gap;
+      font-size: 0.82rem; color: var(--text-dim); gap: 1rem;
+    }
+    .footer-bottom span { color: var(--accent); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes floatUp { from { opacity: 0; transform: translateY(-40%) scale(0.97); } to { opacity: 1; transform: translateY(-50%) scale(1); } }
+    @keyframes float { 0%,100% { transform: translateY(-50%) translateY(0px); } 50% { transform: translateY(-50%) translateY(-10px); } }
+    .hero-visual { animation: float 5s ease-in-out infinite; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-visual { display: none; }
+      .hero-content { max-width: 100%; }
+    }
+    @media (max-width: 640px) {
+      nav { padding: 0 4%; }
+      .nav-links { display: none; }
+      .hamburger { display: block; }
+      section { padding: 70px 4%; }
+      .hero { padding: 110px 4% 70px; }
+      .tasks-flex { flex-direction: column; }
+      .footer-top { flex-direction: column; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="teen.html" class="nav-logo">Funng<span>ro</span></a>
+  <div class="nav-links">
+    <a href="teen.html" class="active">For Teens</a>
+    <a href="company.html">For Companies</a>
+    <a href="#how">How It Works</a>
+    <a href="#tasks">Tasks</a>
+    <a href="teen.html#signup" class="nav-pill">Start Earning</a>
+  </div>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><i class="fas fa-bars"></i></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="teen.html">For Teens</a>
+  <a href="company.html">For Companies</a>
+  <a href="#how">How It Works</a>
+  <a href="#tasks">Tasks</a>
+  <a href="#signup">Start Earning →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><i class="fas fa-bolt"></i> Teens Are Earning Right Now</div>
+    <h1>Earn Money<br />as a <em>Teen</em></h1>
+    <p>Complete real tasks for top companies, build your professional portfolio, and get paid — all while you're in school. No experience needed. Start today.</p>
+    <div class="hero-cta">
+      <a href="#signup" class="btn-primary"><i class="fas fa-rocket"></i> Start Earning Free</a>
+      <a href="#how" class="btn-outline"><i class="fas fa-play-circle"></i> See How It Works</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">50K+</div><div class="stat-label">Active Teens</div></div>
+      <div class="stat"><div class="stat-num">₹2Cr+</div><div class="stat-label">Total Paid Out</div></div>
+      <div class="stat"><div class="stat-num">200+</div><div class="stat-label">Partner Companies</div></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="phone-mockup">
+      <div class="phone-inner">
+        <div class="task-card">
+          <div class="task-icon orange"><i class="fas fa-pen-nib"></i></div>
+          <div class="task-info">
+            <div class="task-title">Write Product Reviews</div>
+            <div class="task-sub">E-commerce · 15 min</div>
+          </div>
+          <div class="task-earn">₹120</div>
+        </div>
+        <div class="task-card">
+          <div class="task-icon red"><i class="fas fa-hashtag"></i></div>
+          <div class="task-info">
+            <div class="task-title">Social Media Post</div>
+            <div class="task-sub">Marketing · 20 min</div>
+          </div>
+          <div class="task-earn">₹200</div>
+        </div>
+        <div class="task-card">
+          <div class="task-icon blue"><i class="fas fa-bug"></i></div>
+          <div class="task-info">
+            <div class="task-title">App Testing Report</div>
+            <div class="task-sub">Tech · 30 min</div>
+          </div>
+          <div class="task-earn">₹350</div>
+        </div>
+        <div class="earn-banner">
+          <div class="amount">₹2,800</div>
+          <div class="label">Your earnings this week 🎉</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="section-header center">
+    <span class="section-label">How It Works</span>
+    <h2 class="section-title">3 Simple Steps to Start Earning</h2>
+    <p class="section-sub">From zero to paid in minutes. Our platform is built for teenagers — no prior experience required.</p>
+  </div>
+  <div class="steps-grid">
+    <article class="step-card">
+      <div class="step-num">01</div>
+      <div class="step-icon"><i class="fas fa-user-plus"></i></div>
+      <h3 class="step-title">Create Your Profile</h3>
+      <p class="step-desc">Sign up free in 2 minutes. Tell us your interests and skills — whether it's social media, writing, design, or tech. No work history needed.</p>
+    </article>
+    <article class="step-card">
+      <div class="step-num">02</div>
+      <div class="step-icon"><i class="fas fa-tasks"></i></div>
+      <h3 class="step-title">Browse & Complete Tasks</h3>
+      <p class="step-desc">Pick tasks that match your skills and schedule. Complete them on your own time, from anywhere. Our AI matches you to the best opportunities.</p>
+    </article>
+    <article class="step-card">
+      <div class="step-num">03</div>
+      <div class="step-icon"><i class="fas fa-wallet"></i></div>
+      <h3 class="step-title">Get Paid Instantly</h3>
+      <p class="step-desc">Submit your work and receive payment directly to your UPI or bank account within 24 hours. Watch your earnings grow week by week.</p>
+    </article>
+    <article class="step-card">
+      <div class="step-num">04</div>
+      <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+      <h3 class="step-title">Build Your Portfolio</h3>
+      <p class="step-desc">Every task completed adds to your verified work portfolio — a professional record that stands out on college applications and future jobs.</p>
+    </article>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section id="benefits">
+  <div class="section-header">
+    <span class="section-label">Why Funngro</span>
+    <h2 class="section-title">Built for Your Future,<br />Starting Now</h2>
+    <p class="section-sub">Funngro isn't just about earning today — it's about building the foundation for a successful career.</p>
+  </div>
+  <div class="benefits-grid">
+    <article class="benefit-card">
+      <div class="benefit-icon"><i class="fas fa-money-bill-wave"></i></div>
+      <h3 class="benefit-title">Real Money in Your Account</h3>
+      <p class="benefit-desc">Earn between ₹100–₹1000 per task. Top teens earn ₹8,000–₹15,000 per month — more than most part-time jobs.</p>
+    </article>
+    <article class="benefit-card">
+      <div class="benefit-icon"><i class="fas fa-graduation-cap"></i></div>
+      <h3 class="benefit-title">Learn Industry-Relevant Skills</h3>
+      <p class="benefit-desc">Work on real tasks in digital marketing, content creation, UI testing, data entry, and more. Skills colleges and employers actually value.</p>
+    </article>
+    <article class="benefit-card">
+      <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+      <h3 class="benefit-title">Flexible Around School</h3>
+      <p class="benefit-desc">No fixed hours, no deadlines that clash with exams. Work 1 hour or 5 hours a week — it's completely your call.</p>
+    </article>
+    <article class="benefit-card">
+      <div class="benefit-icon"><i class="fas fa-certificate"></i></div>
+      <h3 class="benefit-title">Verified Work Portfolio</h3>
+      <p class="benefit-desc">Get company-verified certificates for every project. Build a resume that actually shows what you can do, not just what grade you got.</p>
+    </article>
+    <article class="benefit-card">
+      <div class="benefit-icon"><i class="fas fa-users"></i></div>
+      <h3 class="benefit-title">Network with Professionals</h3>
+      <p class="benefit-desc">Work directly with founders, marketers, and product teams at real startups. Build connections before you graduate.</p>
+    </article>
+    <article class="benefit-card">
+      <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+      <h3 class="benefit-title">100% Safe & Verified</h3>
+      <p class="benefit-desc">All companies on Funngro are KYC-verified. Parents can link accounts for full transparency. Your safety is our top priority.</p>
+    </article>
+  </div>
+</section>
+
+<!-- TASKS -->
+<section class="tasks" id="tasks">
+  <div class="tasks-flex">
+    <div class="tasks-left">
+      <span class="section-label">Available Tasks</span>
+      <h2 class="section-title">Tasks That Match<br />Your Interests</h2>
+      <p class="section-sub">From creative writing to technical testing, there's a task for every teen. New opportunities posted daily by 200+ companies.</p>
+      <br />
+      <a href="#signup" class="btn-primary"><i class="fas fa-search"></i> Browse All Tasks</a>
+    </div>
+    <div class="tasks-right">
+      <div class="task-type">
+        <div class="task-type-icon">✍️</div>
+        <div class="task-type-info">
+          <div class="task-type-name">Content Writing</div>
+          <div class="task-type-range">₹100 – ₹500 per task</div>
+        </div>
+        <span class="task-type-tag">Popular</span>
+      </div>
+      <div class="task-type">
+        <div class="task-type-icon">📱</div>
+        <div class="task-type-info">
+          <div class="task-type-name">Social Media Tasks</div>
+          <div class="task-type-range">₹150 – ₹700 per task</div>
+        </div>
+        <span class="task-type-tag tag-hot">🔥 Hot</span>
+      </div>
+      <div class="task-type">
+        <div class="task-type-icon">🎨</div>
+        <div class="task-type-info">
+          <div class="task-type-name">Graphic Design</div>
+          <div class="task-type-range">₹200 – ₹1000 per task</div>
+        </div>
+        <span class="task-type-tag">New</span>
+      </div>
+      <div class="task-type">
+        <div class="task-type-icon">🐛</div>
+        <div class="task-type-info">
+          <div class="task-type-name">App & Website Testing</div>
+          <div class="task-type-range">₹250 – ₹800 per task</div>
+        </div>
+        <span class="task-type-tag">Easy</span>
+      </div>
+      <div class="task-type">
+        <div class="task-type-icon">📊</div>
+        <div class="task-type-info">
+          <div class="task-type-name">Data & Research Tasks</div>
+          <div class="task-type-range">₹100 – ₹400 per task</div>
+        </div>
+        <span class="task-type-tag">Popular</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-header center">
+    <span class="section-label">Success Stories</span>
+    <h2 class="section-title">Teens Who Are Already Winning</h2>
+    <p class="section-sub">Real teens, real earnings, real experience. Here's what they're saying.</p>
+  </div>
+  <div class="testimonials-grid">
+    <article class="testi-card">
+      <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p class="testi-text">"I earned ₹6,500 last month just by writing product descriptions after school. Now I'm building a real writing portfolio before even finishing 11th grade!"</p>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background: linear-gradient(135deg, #f5a623, #ff6b35);">A</div>
+        <div>
+          <div class="testi-name">Ananya Sharma</div>
+          <div class="testi-meta">Class 11 · Delhi</div>
+        </div>
+      </div>
+    </article>
+    <article class="testi-card">
+      <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p class="testi-text">"The app testing tasks were perfect for me. I love tech and now I've got 8 verified reviews on my profile. Companies have already started messaging me directly!"</p>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background: linear-gradient(135deg, #63b3ed, #3182ce);">R</div>
+        <div>
+          <div class="testi-name">Rohan Mehta</div>
+          <div class="testi-meta">Class 12 · Pune</div>
+        </div>
+      </div>
+    </article>
+    <article class="testi-card">
+      <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p class="testi-text">"My parents were skeptical at first. Now they're proud! I've earned ₹12,000 in 2 months doing social media tasks. I pay for my own coaching classes now."</p>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background: linear-gradient(135deg, #68d391, #38a169);">P</div>
+        <div>
+          <div class="testi-name">Priya Nair</div>
+          <div class="testi-meta">Class 10 · Bangalore</div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="signup">
+  <span class="section-label">Get Started</span>
+  <h2 class="section-title">Your First Earning Is One Click Away</h2>
+  <p>Join 50,000+ teens already earning. Free to join, no experience required.</p>
+  <a href="#signup" class="btn-primary"><i class="fas fa-rocket"></i> Create Free Account</a>
+  <div class="cta-note"><i class="fas fa-lock"></i> No credit card · Safe & parent-approved · Start in 2 minutes</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">Funng<span>ro</span></div>
+      <p>India's leading platform connecting talented teenagers with top companies for real work, real skills, and real money.</p>
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Platform</h4>
+      <a href="#">Browse Tasks</a>
+      <a href="#">My Earnings</a>
+      <a href="#">Portfolio Builder</a>
+      <a href="#">Leaderboard</a>
+    </div>
+    <div class="footer-col">
+      <h4>Learn</h4>
+      <a href="#">Skill Guides</a>
+      <a href="#">Blog</a>
+      <a href="#">Success Stories</a>
+      <a href="#">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="company.html">For Businesses</a>
+      <a href="#">About Us</a>
+      <a href="#">Careers</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:hello@funngro.com"><i class="fas fa-envelope" style="margin-right:6px; color:var(--accent)"></i> hello@funngro.com</a>
+      <a href="tel:+918000123456"><i class="fas fa-phone" style="margin-right:6px; color:var(--accent)"></i> +91 80001 23456</a>
+      <a href="#"><i class="fas fa-map-marker-alt" style="margin-right:6px; color:var(--accent)"></i> Bengaluru, India</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2024 <span>Funngro</span>. All rights reserved.</div>
+    <div style="display:flex; gap:1.5rem; flex-wrap:wrap">
+      <a href="#" style="color:var(--text-dim); text-decoration:none; transition:color .2s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-dim)'">Privacy Policy</a>
+      <a href="#" style="color:var(--text-dim); text-decoration:none; transition:color .2s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-dim)'">Terms of Service</a>
+      <a href="#" style="color:var(--text-dim); text-decoration:none; transition:color .2s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-dim)'">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.step-card, .benefit-card, .testi-card, .task-type').forEach(el => {
+    el.style.opacity = '0'; el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease, border-color 0.25s, box-shadow 0.25s';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
